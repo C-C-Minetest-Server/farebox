@@ -110,7 +110,7 @@ minetest.register_node("farebox:faregate_open", {
     mesecons = {
         effector = {
             rules = mesecon.rules.default,
-            action_off = function(pos, node)
+            action_on = function(pos, node)
                 _farebox_close(pos, node)
 
                 local timer = minetest.get_node_timer(pos)
