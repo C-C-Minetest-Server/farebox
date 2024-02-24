@@ -1,0 +1,22 @@
+# textdomain: farebox
+
+##[ src/callbacks.lua ]##
+Payment accepted.=
+Owner's inventory is full.=
+You don't have enough items to complete the payment.=
+
+##[ src/common.lua ]##
+Entrance fee:=
+Open=
+Owner Wants:=
+(Click on the item to pay)=
+
+##[ src/farebox.lua ]##
+Farebox=
+
+##[ src/farebox.lua ]##
+##[ src/faregate.lua ]##
+@1 (Owned by @2)=
+
+##[ src/faregate.lua ]##
+Faregate=

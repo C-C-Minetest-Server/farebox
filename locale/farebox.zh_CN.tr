@@ -1,0 +1,22 @@
+# textdomain: farebox
+
+##[ src/callbacks.lua ]##
+Payment accepted.=交易已接受。
+Owner's inventory is full.=拥有者的物品栏已满。
+You don't have enough items to complete the payment.=您没有足够的物品以完成交易。
+
+##[ src/common.lua ]##
+Entrance fee:=进入费用：
+Open=打开
+Owner Wants:=拥有者想要：
+(Click on the item to pay)=（点击物品以付款）
+
+##[ src/farebox.lua ]##
+Farebox=付款箱
+
+##[ src/farebox.lua ]##
+##[ src/faregate.lua ]##
+@1 (Owned by @2)=@1（由 @2 拥有）
+
+##[ src/faregate.lua ]##
+Faregate=付款闸
