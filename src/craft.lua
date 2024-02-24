@@ -1,5 +1,5 @@
--- farebox/init.lua
--- Signal-emitting fareboxes and faregates
+-- farebox/src/craft.lua
+-- Handle crafting recipies
 --[[
     ISC License
 
@@ -19,15 +19,28 @@
     PERFORMANCE OF THIS SOFTWARE.
 ]]
 
-farebox = {}
-
-local MP = minetest.get_modpath("farebox")
-for _, name in ipairs({
-    "common",
-    "callbacks",
-    "farebox",
-    "faregate",
-    "craft",
-}) do
-    dofile(MP .. "/src/" .. name .. ".lua")
+local mese = "default:mese_crystal"
+if minetest.get_modpath("mesecons_wires") then
+    mese = "mesecons:wire_00000000_off"
 end
+
+minetest.register_craft({
+    output = "farebox:farebox",
+    recipe = {
+        { "default:steel_ingot", "default:steel_ingot", "default:steel_ingot" },
+        { "default:steel_ingot", "",                    "default:steel_ingot" },
+        { "default:steel_ingot", mese,                  "default:steel_ingot" },
+    }
+})
+
+local door = "default:steel_ingot"
+if minetest.get_modpath("doors") then
+    door = "doors:door_steel"
+end
+
+minetest.register_craft({
+    output = "farebox:faregate",
+    recipe = {
+        { "farebox:farebox", door },
+    }
+})
